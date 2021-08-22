@@ -22,7 +22,7 @@ public class Page19IsAliveOtherTest {
 class CountOperateThread extends Thread {
     public CountOperateThread() {
         System.out.println("CountOperateThread -- begin.");
-        System.out.println("ThreadUtils.getThreadName(): " + ThreadUtil.getThreadName());
+        System.out.println("ThreadUtil.getThreadName(): " + ThreadUtil.getThreadName());
         System.out.println("Thread.currentThread().isAlive(): " + Thread.currentThread().isAlive());
         System.out.println("this.getName(): " + this.getName());
         System.out.println("this.isAlive(): " + this.isAlive());
@@ -32,7 +32,7 @@ class CountOperateThread extends Thread {
     @Override
     public void run() {
         System.out.println("run -- begin.");
-        System.out.println("ThreadUtils.getThreadName(): " + ThreadUtil.getThreadName());
+        System.out.println("ThreadUtil.getThreadName(): " + ThreadUtil.getThreadName());
         System.out.println("Thread.currentThread().isAlive(): " + Thread.currentThread().isAlive());
         System.out.println("this.getName(): " + this.getName());
         System.out.println("this.isAlive(): " + this.isAlive());

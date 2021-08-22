@@ -26,9 +26,9 @@ class CountOperateThread extends Thread {
 
     @Override
     public void run() {
-        System.out.println("run constructor begin.");
+        System.out.println("run begin.");
         System.out.println("Thread.currentThread().getName(): " + ThreadUtil.getThreadName());
         System.out.println("this.getName(): " + this.getName());
-        System.out.println("run constructor end.");
+        System.out.println("run end.");
     }
 }

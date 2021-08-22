@@ -8,7 +8,7 @@ import top.imdtf.multi.thread.utils.ThreadUtil;
  * 2 * @email:  imdtf@qq.com
  * 3 * @Date:  2021/8/2 23:14
  */
-public class Page50DaemeonThread {
+public class Page50DaemonThread {
     public static void main(String[] args) {
         MyThread myThread = new MyThread();
         myThread.setDaemon(true);

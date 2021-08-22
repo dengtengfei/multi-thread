@@ -25,9 +25,7 @@ class MyThread extends Thread {
     @Override
     synchronized public void run() {
         super.run();
-        while (count > 0) {
-            --count;
-            System.out.println("from " + currentThread().getName() + " calc, count: " + count);
-        }
+        --count;
+        System.out.println("from " + currentThread().getName() + " calc, count: " + count);
     }
 }

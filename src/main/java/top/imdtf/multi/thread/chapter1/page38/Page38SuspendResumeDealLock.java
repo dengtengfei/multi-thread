@@ -1,4 +1,4 @@
-package top.imdtf.multi.thread.chapter1.page37;
+package top.imdtf.multi.thread.chapter1.page38;
 
 import top.imdtf.multi.thread.utils.Constant;
 import top.imdtf.multi.thread.utils.ThreadUtil;

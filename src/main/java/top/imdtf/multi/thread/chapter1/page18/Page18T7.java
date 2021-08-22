@@ -11,7 +11,7 @@ public class Page18T7 {
         MyThread myThread = new MyThread();
         System.out.println("begin: " + myThread.isAlive());
         myThread.start();
-        // TODO ThreadUtils.sleep(1000)
+        // TODO ThreadUtil.sleep(1000)
         System.out.println("end: " + myThread.isAlive());
     }
 }

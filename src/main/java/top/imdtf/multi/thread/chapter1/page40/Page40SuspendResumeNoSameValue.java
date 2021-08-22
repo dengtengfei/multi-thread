@@ -12,9 +12,7 @@ import top.imdtf.multi.thread.utils.ThreadUtil;
 public class Page40SuspendResumeNoSameValue {
     public static void main(String[] args) {
         final MyObject object = new MyObject();
-        Thread thread = ThreadUtil.newThread(() -> object.setValue("a", "aa"));
-        thread.setName("a");
-        thread.start();
+        ThreadUtil.newThread(() -> object.setValue("a", "aa"), Constant.UPPERCASE_STR_A).start();
         ThreadUtil.sleep(500);
 
         ThreadUtil.newThread(object::printValue).start();
@@ -27,8 +25,8 @@ class MyObject {
 
     public void setValue(String username, String password) {
         this.username = username;
-        if (Constant.STR_A.equals(ThreadUtil.getThreadName())) {
-            System.out.println("Suspend thread a.");
+        if (Constant.UPPERCASE_STR_A.equals(ThreadUtil.getThreadName())) {
+            System.out.println("Suspend thread: " + ThreadUtil.getThreadName());
             Thread.currentThread().suspend();
         }
         this.password = password;

@@ -1,6 +1,6 @@
 package top.imdtf.multi.thread.chapter1.page14;
 
-import top.imdtf.multi.thread.utils.ThreadUtils;
+import top.imdtf.multi.thread.utils.ThreadUtil;
 
 /**
  * 0 *
@@ -11,11 +11,11 @@ import top.imdtf.multi.thread.utils.ThreadUtils;
 public class Page14SameNum {
     public static void main(String[] args) {
         MyThread myThread = new MyThread();
-        ThreadUtils.newThread(myThread).start();
-        ThreadUtils.newThread(myThread).start();
-        ThreadUtils.newThread(myThread).start();
-        ThreadUtils.newThread(myThread).start();
-        ThreadUtils.newThread(myThread).start();
+        ThreadUtil.newThread(myThread).start();
+        ThreadUtil.newThread(myThread).start();
+        ThreadUtil.newThread(myThread).start();
+        ThreadUtil.newThread(myThread).start();
+        ThreadUtil.newThread(myThread).start();
     }
 }
 
@@ -24,6 +24,6 @@ class MyThread extends Thread {
 
     @Override
     synchronized public void run() {
-        System.out.println("Thread name: " + ThreadUtils.getThreadName() + " i: " + (i--));
+        System.out.println("Thread name: " + ThreadUtil.getThreadName() + " i: " + (i--));
     }
 }

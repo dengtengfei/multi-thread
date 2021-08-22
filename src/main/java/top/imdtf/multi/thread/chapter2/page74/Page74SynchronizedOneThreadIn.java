@@ -1,7 +1,7 @@
 package top.imdtf.multi.thread.chapter2.page74;
 
 import top.imdtf.multi.thread.utils.Constant;
-import top.imdtf.multi.thread.utils.ThreadUtils;
+import top.imdtf.multi.thread.utils.ThreadUtil;
 
 /**
  * 0 *
@@ -20,9 +20,9 @@ public class Page74SynchronizedOneThreadIn {
 class Service {
     public void testMethod() {
         synchronized (this) {
-            System.out.println("ThreadName: " + ThreadUtils.getThreadName() + ", begin time: " + System.currentTimeMillis());
-            ThreadUtils.sleep(2000);
-            System.out.println("ThreadName: " + ThreadUtils.getThreadName() + ", end time: " + System.currentTimeMillis());
+            System.out.println("ThreadName: " + ThreadUtil.getThreadName() + ", begin time: " + System.currentTimeMillis());
+            ThreadUtil.sleep(2000);
+            System.out.println("ThreadName: " + ThreadUtil.getThreadName() + ", end time: " + System.currentTimeMillis());
         }
     }
 }

@@ -1,7 +1,7 @@
 package top.imdtf.multi.thread.chapter1.page27;
 
 import top.imdtf.multi.thread.utils.Constant;
-import top.imdtf.multi.thread.utils.ThreadUtils;
+import top.imdtf.multi.thread.utils.ThreadUtil;
 
 /**
  * 0 *
@@ -13,13 +13,13 @@ public class Page27T13 {
     public static void main(String[] args) {
         MyThread myThread = new MyThread();
         myThread.start();
-        ThreadUtils.sleep(100);
+        ThreadUtil.sleep(100);
         myThread.interrupt();
 
         System.out.println("==============\n\n\n");
         MyThread2 myThread2 = new MyThread2();
         myThread2.start();
-        ThreadUtils.sleep(100);
+        ThreadUtil.sleep(100);
         myThread2.interrupt();
 
         System.out.println("Main end.");

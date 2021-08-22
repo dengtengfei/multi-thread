@@ -1,6 +1,6 @@
 package top.imdtf.multi.thread.chapter2.page66;
 
-import top.imdtf.multi.thread.utils.ThreadUtils;
+import top.imdtf.multi.thread.utils.ThreadUtil;
 
 /**
  * 0 *
@@ -20,7 +20,7 @@ class Base {
     protected synchronized void operateBaseMethod() {
         --i;
         System.out.println("Base operate i: " + i);
-        ThreadUtils.sleep(100);
+        ThreadUtil.sleep(100);
     }
 }
 
@@ -29,7 +29,7 @@ class Sub extends Base {
         while (i > 0) {
             --i;
             System.out.println("Sub operate i: " + i);
-            ThreadUtils.sleep(100);
+            ThreadUtil.sleep(100);
             operateBaseMethod();
         }
     }

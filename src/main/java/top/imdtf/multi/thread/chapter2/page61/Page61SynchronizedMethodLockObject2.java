@@ -1,7 +1,7 @@
 package top.imdtf.multi.thread.chapter2.page61;
 
 import top.imdtf.multi.thread.utils.Constant;
-import top.imdtf.multi.thread.utils.ThreadUtils;
+import top.imdtf.multi.thread.utils.ThreadUtil;
 
 /**
  * 0 *
@@ -19,14 +19,14 @@ public class Page61SynchronizedMethodLockObject2 {
 
 class MyObject {
     synchronized public void methodA() {
-        System.out.println("Begin methodA threadName: " + ThreadUtils.getThreadName());
-        ThreadUtils.sleep(5000);
+        System.out.println("Begin methodA threadName: " + ThreadUtil.getThreadName());
+        ThreadUtil.sleep(5000);
         System.out.println("End methodA time: " + System.currentTimeMillis() + "ms.");
     }
 
     synchronized public void methodB() {
-        System.out.println("Begin methodB threadName: " + ThreadUtils.getThreadName());
-        ThreadUtils.sleep(5000);
+        System.out.println("Begin methodB threadName: " + ThreadUtil.getThreadName());
+        ThreadUtil.sleep(5000);
         System.out.println("End methodB time: " + System.currentTimeMillis() + "ms.");
     }
 }

@@ -1,6 +1,6 @@
 package top.imdtf.multi.thread.chapter1.page50;
 
-import top.imdtf.multi.thread.utils.ThreadUtils;
+import top.imdtf.multi.thread.utils.ThreadUtil;
 
 /**
  * 0 *
@@ -13,7 +13,7 @@ public class Page50DaemeonThread {
         MyThread myThread = new MyThread();
         myThread.setDaemon(true);
         myThread.start();
-        ThreadUtils.sleep(10000);
+        ThreadUtil.sleep(10000);
         System.out.println("Main end, and daemon thread end.");
     }
 }
@@ -26,7 +26,7 @@ class MyThread extends Thread {
         while (true) {
             ++i;
             System.out.println("i: " + i);
-            ThreadUtils.sleep(1000);
+            ThreadUtil.sleep(1000);
         }
     }
 }

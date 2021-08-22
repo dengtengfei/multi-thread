@@ -1,6 +1,6 @@
 package top.imdtf.multi.thread.chapter1.page4.case1;
 
-import top.imdtf.multi.thread.utils.ThreadUtils;
+import top.imdtf.multi.thread.utils.ThreadUtil;
 
 /**
  * 0 *
@@ -10,6 +10,6 @@ import top.imdtf.multi.thread.utils.ThreadUtils;
  */
 public class Page4CallMainMethodMainThread {
     public static void main(String[] args) {
-        System.out.println(ThreadUtils.getThreadName());
+        System.out.println(ThreadUtil.getThreadName());
     }
 }

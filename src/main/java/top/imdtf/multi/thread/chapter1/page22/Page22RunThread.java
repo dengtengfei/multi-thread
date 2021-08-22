@@ -1,6 +1,6 @@
 package top.imdtf.multi.thread.chapter1.page22;
 
-import top.imdtf.multi.thread.utils.ThreadUtils;
+import top.imdtf.multi.thread.utils.ThreadUtil;
 
 /**
  * 0 *
@@ -10,6 +10,6 @@ import top.imdtf.multi.thread.utils.ThreadUtils;
  */
 public class Page22RunThread {
     public static void main(String[] args) {
-        System.out.println(ThreadUtils.getThreadName() + " " + Thread.currentThread().getId());
+        System.out.println(ThreadUtil.getThreadName() + " " + Thread.currentThread().getId());
     }
 }

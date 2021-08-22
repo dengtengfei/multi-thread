@@ -1,8 +1,8 @@
 package top.imdtf.multi.thread.chapter1.page5;
 
 import top.imdtf.multi.thread.utils.Constant;
-import top.imdtf.multi.thread.utils.RandomUtils;
-import top.imdtf.multi.thread.utils.ThreadUtils;
+import top.imdtf.multi.thread.utils.RandomUtil;
+import top.imdtf.multi.thread.utils.ThreadUtil;
 
 /**
  * 0 *
@@ -16,9 +16,9 @@ public class Page5RandomThread {
         myThread.setName("myThread");
         myThread.start();
         for (int i = 0; i < Constant.INT_10; ++i) {
-            int time = RandomUtils.getRandomInt1000();
-            ThreadUtils.sleep(time);
-            System.out.println("main: " + ThreadUtils.getThreadName());
+            int time = RandomUtil.getRandomInt1000();
+            ThreadUtil.sleep(time);
+            System.out.println("main: " + ThreadUtil.getThreadName());
         }
     }
 }
@@ -28,9 +28,9 @@ class MyThread extends Thread {
     public void run() {
         super.run();
         for (int i = 0; i < Constant.INT_10; ++i) {
-            int time = RandomUtils.getRandomInt1000();
-            ThreadUtils.sleep(time);
-            System.out.println("run: " + ThreadUtils.getThreadName());
+            int time = RandomUtil.getRandomInt1000();
+            ThreadUtil.sleep(time);
+            System.out.println("run: " + ThreadUtil.getThreadName());
         }
     }
 }

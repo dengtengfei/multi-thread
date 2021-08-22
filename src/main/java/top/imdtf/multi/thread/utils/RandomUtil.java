@@ -8,7 +8,7 @@ import java.util.Random;
  * 2 * @email:  imdtf@qq.com
  * 3 * @Date:  2021/8/1 20:46
  */
-public class RandomUtils {
+public class RandomUtil {
     public static int getRandomInt1000() {
         return new Random().nextInt(1000);
     }

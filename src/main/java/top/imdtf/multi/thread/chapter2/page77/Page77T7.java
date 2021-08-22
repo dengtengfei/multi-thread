@@ -1,7 +1,7 @@
 package top.imdtf.multi.thread.chapter2.page77;
 
 import top.imdtf.multi.thread.utils.Constant;
-import top.imdtf.multi.thread.utils.ThreadUtils;
+import top.imdtf.multi.thread.utils.ThreadUtil;
 
 /**
  * 0 *
@@ -20,12 +20,12 @@ public class Page77T7 {
 class Task {
     public void doLongTimeTask() {
         for (int i = 0; i < Constant.INT_100; ++i) {
-            System.out.println("no synchronized threadName: " + ThreadUtils.getThreadName() + ", i: " + (i + 1));
+            System.out.println("no synchronized threadName: " + ThreadUtil.getThreadName() + ", i: " + (i + 1));
         }
         System.out.println();
         synchronized (this) {
             for (int i = 0; i < Constant.INT_100; ++i) {
-                System.out.println("synchronized threadName: " + ThreadUtils.getThreadName() + ", i: " + (i + 1));
+                System.out.println("synchronized threadName: " + ThreadUtil.getThreadName() + ", i: " + (i + 1));
             }
         }
     }

@@ -1,6 +1,6 @@
 package top.imdtf.multi.thread.chapter1.page19;
 
-import top.imdtf.multi.thread.utils.ThreadUtils;
+import top.imdtf.multi.thread.utils.ThreadUtil;
 
 /**
  * 0 *
@@ -11,7 +11,7 @@ import top.imdtf.multi.thread.utils.ThreadUtils;
 public class Page19IsAliveOtherTest {
     public static void main(String[] args) {
         CountOperateThread countOperateThread = new CountOperateThread();
-        Thread thread = ThreadUtils.newThread(countOperateThread);
+        Thread thread = ThreadUtil.newThread(countOperateThread);
         System.out.println("main begin thread.isAlive(): " + thread.isAlive());
         thread.setName("A");
         thread.start();
@@ -22,7 +22,7 @@ public class Page19IsAliveOtherTest {
 class CountOperateThread extends Thread {
     public CountOperateThread() {
         System.out.println("CountOperateThread -- begin.");
-        System.out.println("ThreadUtils.getThreadName(): " + ThreadUtils.getThreadName());
+        System.out.println("ThreadUtils.getThreadName(): " + ThreadUtil.getThreadName());
         System.out.println("Thread.currentThread().isAlive(): " + Thread.currentThread().isAlive());
         System.out.println("this.getName(): " + this.getName());
         System.out.println("this.isAlive(): " + this.isAlive());
@@ -32,7 +32,7 @@ class CountOperateThread extends Thread {
     @Override
     public void run() {
         System.out.println("run -- begin.");
-        System.out.println("ThreadUtils.getThreadName(): " + ThreadUtils.getThreadName());
+        System.out.println("ThreadUtils.getThreadName(): " + ThreadUtil.getThreadName());
         System.out.println("Thread.currentThread().isAlive(): " + Thread.currentThread().isAlive());
         System.out.println("this.getName(): " + this.getName());
         System.out.println("this.isAlive(): " + this.isAlive());

@@ -1,6 +1,6 @@
 package top.imdtf.multi.thread.chapter1.page8;
 
-import top.imdtf.multi.thread.utils.ThreadUtils;
+import top.imdtf.multi.thread.utils.ThreadUtil;
 
 /**
  * 0 *
@@ -11,7 +11,7 @@ import top.imdtf.multi.thread.utils.ThreadUtils;
 public class Page8T2 {
     public static void main(String[] args) {
         Runnable runnable = new MyRunnable();
-        Thread thread = ThreadUtils.newThread(runnable);
+        Thread thread = ThreadUtil.newThread(runnable);
         thread.start();
         System.out.println("main end.");
     }

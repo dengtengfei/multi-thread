@@ -1,7 +1,7 @@
 package top.imdtf.multi.thread.chapter7.page291;
 
 import top.imdtf.multi.thread.utils.Constant;
-import top.imdtf.multi.thread.utils.ThreadUtils;
+import top.imdtf.multi.thread.utils.ThreadUtil;
 
 /**
  * 0 *
@@ -36,7 +36,7 @@ class MyThread extends Thread {
         synchronized (lock) {
             while (true) {
                 if (addNumber % 3 == showNumPosition) {
-                    System.out.println("ThreadName: " + ThreadUtils.getThreadName() + " runCount: " + addNumber + " " + showChar);
+                    System.out.println("ThreadName: " + ThreadUtil.getThreadName() + " runCount: " + addNumber + " " + showChar);
                     lock.notifyAll();
                     ++addNumber;
                     ++printCount;

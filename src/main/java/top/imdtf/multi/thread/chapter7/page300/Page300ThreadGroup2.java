@@ -1,7 +1,7 @@
 package top.imdtf.multi.thread.chapter7.page300;
 
 import top.imdtf.multi.thread.utils.Constant;
-import top.imdtf.multi.thread.utils.ThreadUtils;
+import top.imdtf.multi.thread.utils.ThreadUtil;
 
 /**
  * 0 *
@@ -15,7 +15,7 @@ public class Page300ThreadGroup2 {
         for (int i = 0; i < Constant.INT_10; ++i) {
             new MyThread(group, "thread-" + (i + 1), "1").start();
         }
-        ThreadUtils.sleep(1);
+        ThreadUtil.sleep(1);
         new MyThread(group, "errorThread", "a").start();
     }
 }
@@ -44,7 +44,7 @@ class MyThread extends Thread {
     public void run() {
         int numInt = Integer.parseInt(num);
         while (this.isInterrupted() == false) {
-            System.out.println("Thread: " + ThreadUtils.getThreadName() + " run into dead loop");
+            System.out.println("Thread: " + ThreadUtil.getThreadName() + " run into dead loop");
         }
 
     }

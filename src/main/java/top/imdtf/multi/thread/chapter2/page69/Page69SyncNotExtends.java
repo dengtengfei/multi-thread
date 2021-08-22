@@ -1,7 +1,7 @@
 package top.imdtf.multi.thread.chapter2.page69;
 
 import top.imdtf.multi.thread.utils.Constant;
-import top.imdtf.multi.thread.utils.ThreadUtils;
+import top.imdtf.multi.thread.utils.ThreadUtil;
 
 /**
  * 0 *
@@ -19,9 +19,9 @@ public class Page69SyncNotExtends {
 
 class Base {
     protected synchronized void testMethod() {
-        System.out.println(ThreadUtils.getThreadName() + " base testMethod sleep before  time: " + System.currentTimeMillis());
-        ThreadUtils.sleep(5000);
-        System.out.println(ThreadUtils.getThreadName() + " base testMethod sleep end     time: " + System.currentTimeMillis());
+        System.out.println(ThreadUtil.getThreadName() + " base testMethod sleep before  time: " + System.currentTimeMillis());
+        ThreadUtil.sleep(5000);
+        System.out.println(ThreadUtil.getThreadName() + " base testMethod sleep end     time: " + System.currentTimeMillis());
     }
 }
 
@@ -29,9 +29,9 @@ class Sub extends Base {
     @Override
     public synchronized void testMethod() {
         // TODO remove synchronized
-        System.out.println(ThreadUtils.getThreadName() + " sub testMethod sleep before  time: " + System.currentTimeMillis());
-        ThreadUtils.sleep(5000);
-        System.out.println(ThreadUtils.getThreadName() + " sub testMethod sleep end     time: " + System.currentTimeMillis());
+        System.out.println(ThreadUtil.getThreadName() + " sub testMethod sleep before  time: " + System.currentTimeMillis());
+        ThreadUtil.sleep(5000);
+        System.out.println(ThreadUtil.getThreadName() + " sub testMethod sleep end     time: " + System.currentTimeMillis());
         super.testMethod();
     }
 }

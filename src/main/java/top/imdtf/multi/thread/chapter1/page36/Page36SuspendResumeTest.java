@@ -1,7 +1,7 @@
 package top.imdtf.multi.thread.chapter1.page36;
 
 import lombok.Getter;
-import top.imdtf.multi.thread.utils.ThreadUtils;
+import top.imdtf.multi.thread.utils.ThreadUtil;
 
 /**
  * 0 *
@@ -13,19 +13,19 @@ public class Page36SuspendResumeTest {
     public static void main(String[] args) {
         MyThread myThread = new MyThread();
         myThread.start();
-        ThreadUtils.sleep(500);
+        ThreadUtil.sleep(500);
 
         myThread.suspend();
         System.out.println("A suspend: " + System.currentTimeMillis() + " i: " + myThread.getI());
-        ThreadUtils.sleep(500);
+        ThreadUtil.sleep(500);
         System.out.println("A suspend: " + System.currentTimeMillis() + " i: " + myThread.getI());
 
         myThread.resume();
-        ThreadUtils.sleep(500);
+        ThreadUtil.sleep(500);
 
         myThread.suspend();
         System.out.println("B suspend: " + System.currentTimeMillis() + " i: " + myThread.getI());
-        ThreadUtils.sleep(500);
+        ThreadUtil.sleep(500);
         System.out.println("B suspend: " + System.currentTimeMillis() + " i: " + myThread.getI());
 
         myThread.resume();

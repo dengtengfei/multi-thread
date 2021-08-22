@@ -2,7 +2,7 @@ package top.imdtf.multi.thread.chapter1.page34;
 
 import lombok.Getter;
 import lombok.Setter;
-import top.imdtf.multi.thread.utils.ThreadUtils;
+import top.imdtf.multi.thread.utils.ThreadUtil;
 
 /**
  * 0 *
@@ -15,7 +15,7 @@ public class Page34StopThrowLock {
         SynchronizedObject object = new SynchronizedObject();
         MyThread myThread = new MyThread(object);
         myThread.start();
-        ThreadUtils.sleep(500);
+        ThreadUtil.sleep(500);
         myThread.stop();
         System.out.println(object.getUsername() + " " + object.getPassword());
     }
@@ -29,7 +29,7 @@ class SynchronizedObject {
 
     synchronized public void printString(String username, String password) {
         this.username = username;
-        ThreadUtils.sleep(5000);
+        ThreadUtil.sleep(5000);
         this.password = password;
     }
 }

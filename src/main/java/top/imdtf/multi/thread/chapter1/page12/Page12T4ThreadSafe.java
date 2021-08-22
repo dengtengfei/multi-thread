@@ -1,7 +1,7 @@
 package top.imdtf.multi.thread.chapter1.page12;
 
 import top.imdtf.multi.thread.utils.Constant;
-import top.imdtf.multi.thread.utils.ThreadUtils;
+import top.imdtf.multi.thread.utils.ThreadUtil;
 
 /**
  * 0 *
@@ -37,7 +37,7 @@ class LoginServlet {
     synchronized public static void doPost(String username, String password) {
         usernameRef = username;
         if (Constant.STR_A.equals(username)) {
-            ThreadUtils.sleep(5000);
+            ThreadUtil.sleep(5000);
         }
         passwordRef = password;
         System.out.println("username: " + usernameRef + ", password: " + passwordRef);

@@ -1,6 +1,6 @@
 package top.imdtf.multi.thread.chapter1.page21;
 
-import top.imdtf.multi.thread.utils.ThreadUtils;
+import top.imdtf.multi.thread.utils.ThreadUtil;
 
 /**
  * 0 *
@@ -21,7 +21,7 @@ class MyThread extends Thread {
     @Override
     public void run() {
         System.out.println("run threadName: " + currentThread().getName() + " begin:    " + System.currentTimeMillis());
-        ThreadUtils.sleep(2000);
+        ThreadUtil.sleep(2000);
         System.out.println("run threadName: " + currentThread().getName() + " end:      " + System.currentTimeMillis());
     }
 }

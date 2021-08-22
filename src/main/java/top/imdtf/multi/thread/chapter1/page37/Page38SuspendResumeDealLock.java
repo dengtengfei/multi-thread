@@ -1,7 +1,7 @@
 package top.imdtf.multi.thread.chapter1.page37;
 
 import top.imdtf.multi.thread.utils.Constant;
-import top.imdtf.multi.thread.utils.ThreadUtils;
+import top.imdtf.multi.thread.utils.ThreadUtil;
 
 /**
  * 0 *
@@ -12,12 +12,12 @@ import top.imdtf.multi.thread.utils.ThreadUtils;
 public class Page38SuspendResumeDealLock {
     public static void main(String[] args) {
         final SynchronizedObject object = new SynchronizedObject();
-        Thread thread = ThreadUtils.newThread(object::printString);
+        Thread thread = ThreadUtil.newThread(object::printString);
         thread.setName("a");
         thread.start();
-        ThreadUtils.sleep(1000);
+        ThreadUtil.sleep(1000);
 
-        ThreadUtils.newThread(() -> {
+        ThreadUtil.newThread(() -> {
             System.out.println("Thread2 started, can not run printString(). There is only one begin print");
             System.out.println("Because of printString() method has been locked by thread which is suspended.");
             object.printString();
@@ -27,8 +27,8 @@ public class Page38SuspendResumeDealLock {
 
 class SynchronizedObject {
     public synchronized void printString() {
-        System.out.println("ThreadName: " + ThreadUtils.getThreadName() + " begin.");
-        if (Constant.STR_A.equals(ThreadUtils.getThreadName())) {
+        System.out.println("ThreadName: " + ThreadUtil.getThreadName() + " begin.");
+        if (Constant.STR_A.equals(ThreadUtil.getThreadName())) {
             System.out.println("thread a suspend forever.");
             Thread.currentThread().suspend();
         }

@@ -1,6 +1,6 @@
 package top.imdtf.multi.thread.chapter1.page11;
 
-import top.imdtf.multi.thread.utils.ThreadUtils;
+import top.imdtf.multi.thread.utils.ThreadUtil;
 
 /**
  * 0 *
@@ -11,11 +11,11 @@ import top.imdtf.multi.thread.utils.ThreadUtils;
 public class Page11T4 {
     public static void main(String[] args) {
         MyThread myThread = new MyThread();
-        ThreadUtils.newThread(myThread, "A").start();
-        ThreadUtils.newThread(myThread, "B").start();
-        ThreadUtils.newThread(myThread, "C").start();
-        ThreadUtils.newThread(myThread, "D").start();
-        ThreadUtils.newThread(myThread, "E").start();
+        ThreadUtil.newThread(myThread, "A").start();
+        ThreadUtil.newThread(myThread, "B").start();
+        ThreadUtil.newThread(myThread, "C").start();
+        ThreadUtil.newThread(myThread, "D").start();
+        ThreadUtil.newThread(myThread, "E").start();
     }
 }
 

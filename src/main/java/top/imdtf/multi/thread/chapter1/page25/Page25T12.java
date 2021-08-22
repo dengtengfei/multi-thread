@@ -1,7 +1,7 @@
 package top.imdtf.multi.thread.chapter1.page25;
 
 import top.imdtf.multi.thread.utils.Constant;
-import top.imdtf.multi.thread.utils.ThreadUtils;
+import top.imdtf.multi.thread.utils.ThreadUtil;
 
 /**
  * 0 *
@@ -19,7 +19,7 @@ public class Page25T12 {
     private static void run1() {
         MyThread myThread = new MyThread();
         myThread.start();
-        ThreadUtils.sleep(1000);
+        ThreadUtil.sleep(1000);
         myThread.interrupt();
         System.out.println("run1 interrupted?: " + Thread.interrupted());
         System.out.println("run1 interrupted?: " + Thread.interrupted() + "\n\n");
@@ -34,7 +34,7 @@ public class Page25T12 {
     private static void run3() {
         MyThread myThread = new MyThread();
         myThread.start();
-        ThreadUtils.sleep(1000);
+        ThreadUtil.sleep(1000);
         myThread.interrupt();
         System.out.println("run3 isInterrupted?: " + myThread.isInterrupted());
         System.out.println("run3 isInterrupted?: " + myThread.isInterrupted() + "\n\n");

@@ -1,7 +1,6 @@
 package top.imdtf.multi.thread.chapter7.page293;
 
 import top.imdtf.multi.thread.utils.Constant;
-import top.imdtf.multi.thread.utils.ThreadUtils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

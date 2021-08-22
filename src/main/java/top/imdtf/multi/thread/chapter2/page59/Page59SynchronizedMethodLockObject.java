@@ -1,7 +1,6 @@
 package top.imdtf.multi.thread.chapter2.page59;
 
-import top.imdtf.multi.thread.utils.Constant;
-import top.imdtf.multi.thread.utils.ThreadUtils;
+import top.imdtf.multi.thread.utils.ThreadUtil;
 
 /**
  * 0 *
@@ -19,8 +18,8 @@ public class Page59SynchronizedMethodLockObject {
 
 class MyObject {
     synchronized public void method() {
-        System.out.println("Begin method threadName: " + ThreadUtils.getThreadName());
-        ThreadUtils.sleep(5000);
+        System.out.println("Begin method threadName: " + ThreadUtil.getThreadName());
+        ThreadUtil.sleep(5000);
         System.out.println("End.");
     }
 }

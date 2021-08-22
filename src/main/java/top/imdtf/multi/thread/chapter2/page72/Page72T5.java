@@ -1,6 +1,6 @@
 package top.imdtf.multi.thread.chapter2.page72;
 
-import top.imdtf.multi.thread.utils.ThreadUtils;
+import top.imdtf.multi.thread.utils.ThreadUtil;
 
 /**
  * 0 *
@@ -14,7 +14,7 @@ public class Page72T5 {
         new MyThread(task, 0).start();
         new MyThread(task, 1).start();
 
-        ThreadUtils.sleep(10000);
+        ThreadUtil.sleep(10000);
         long beginTime = Math.min(CommonUtils.beginTime[0], CommonUtils.beginTime[1]);
         long endTime = Math.max(CommonUtils.endTime[0], CommonUtils.endTime[1]);
         System.out.println("Time consume: " + (endTime - beginTime) + "ms.");
@@ -26,9 +26,9 @@ class Task {
 
     synchronized public void doLongTimeTask() {
         System.out.println("Begin task.");
-        ThreadUtils.sleep(3000);
-        getData1 = "The result of executing long time task is: 1, threadName: " + ThreadUtils.getThreadName();
-        getData2 = "The result of executing long time task is: 2, threadName: " + ThreadUtils.getThreadName();
+        ThreadUtil.sleep(3000);
+        getData1 = "The result of executing long time task is: 1, threadName: " + ThreadUtil.getThreadName();
+        getData2 = "The result of executing long time task is: 2, threadName: " + ThreadUtil.getThreadName();
         System.out.println(getData1);
         System.out.println(getData2);
         System.out.println("End task.");

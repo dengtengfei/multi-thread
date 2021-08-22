@@ -1,7 +1,7 @@
 package top.imdtf.multi.thread.chapter2.page68;
 
 import top.imdtf.multi.thread.utils.Constant;
-import top.imdtf.multi.thread.utils.ThreadUtils;
+import top.imdtf.multi.thread.utils.ThreadUtil;
 
 /**
  * 0 *
@@ -13,24 +13,24 @@ public class Page68ThrowExceptionNoLock {
     public static void main(String[] args) {
         Service service = new Service();
         new MyThread(service, Constant.STR_A).start();
-        ThreadUtils.sleep(500);
+        ThreadUtil.sleep(500);
         new MyThread(service, Constant.STR_B).start();
     }
 }
 
 class Service {
     public synchronized void testMethod() {
-        if (Constant.STR_A.equals(ThreadUtils.getThreadName())) {
-            System.out.println("ThreadName: " + ThreadUtils.getThreadName() + ", testMethod begin time: " + System.currentTimeMillis());
+        if (Constant.STR_A.equals(ThreadUtil.getThreadName())) {
+            System.out.println("ThreadName: " + ThreadUtil.getThreadName() + ", testMethod begin time: " + System.currentTimeMillis());
             while (true) {
                 String compareStr = "0.1234567";
                 if (compareStr.equals(String.valueOf(Math.random()).substring(0, compareStr.length()))) {
-                    System.out.println("ThreadName: " + ThreadUtils.getThreadName() + ", run exception, time: " + System.currentTimeMillis());
+                    System.out.println("ThreadName: " + ThreadUtil.getThreadName() + ", run exception, time: " + System.currentTimeMillis());
                     System.out.println(Integer.parseInt("a"));
                 }
             }
         } else {
-            System.out.println("ThreadName: " + ThreadUtils.getThreadName() + ", testMethod begin time: " + System.currentTimeMillis());
+            System.out.println("ThreadName: " + ThreadUtil.getThreadName() + ", testMethod begin time: " + System.currentTimeMillis());
         }
     }
 }

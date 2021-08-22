@@ -1,7 +1,7 @@
 package top.imdtf.multi.thread.chapter7.page299;
 
 import top.imdtf.multi.thread.utils.Constant;
-import top.imdtf.multi.thread.utils.ThreadUtils;
+import top.imdtf.multi.thread.utils.ThreadUtil;
 
 /**
  * 0 *
@@ -32,7 +32,7 @@ class MyThread extends Thread {
     public void run() {
         int numInt = Integer.parseInt(num);
         while (true) {
-            System.out.println("Thread: " + ThreadUtils.getThreadName() + " run into dead loop");
+            System.out.println("Thread: " + ThreadUtil.getThreadName() + " run into dead loop");
         }
     }
 }

@@ -6,7 +6,7 @@ package top.imdtf.multi.thread.utils;
  * 2 * @email:  imdtf@qq.com
  * 3 * @Date:  2021/8/1 20:34
  */
-public class ThreadUtils {
+public class ThreadUtil {
     public static void sleep(long millis) {
         try {
             Thread.sleep(millis);

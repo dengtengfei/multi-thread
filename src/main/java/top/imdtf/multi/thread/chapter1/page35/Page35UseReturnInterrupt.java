@@ -1,6 +1,6 @@
 package top.imdtf.multi.thread.chapter1.page35;
 
-import top.imdtf.multi.thread.utils.ThreadUtils;
+import top.imdtf.multi.thread.utils.ThreadUtil;
 
 /**
  * 0 *
@@ -12,7 +12,7 @@ public class Page35UseReturnInterrupt {
     public static void main(String[] args) {
         MyThread myThread = new MyThread();
         myThread.start();
-        ThreadUtils.sleep(2000);
+        ThreadUtil.sleep(2000);
         myThread.interrupt();
     }
 }

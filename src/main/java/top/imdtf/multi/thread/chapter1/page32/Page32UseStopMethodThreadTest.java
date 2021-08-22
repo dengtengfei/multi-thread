@@ -1,6 +1,6 @@
 package top.imdtf.multi.thread.chapter1.page32;
 
-import top.imdtf.multi.thread.utils.ThreadUtils;
+import top.imdtf.multi.thread.utils.ThreadUtil;
 
 /**
  * 0 *
@@ -32,7 +32,7 @@ class MyThread extends Thread {
         while (true) {
             ++i;
             System.out.println("i: " + i);
-            ThreadUtils.sleep(1000);
+            ThreadUtil.sleep(1000);
         }
     }
 }

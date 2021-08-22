@@ -1,6 +1,6 @@
 package top.imdtf.multi.thread.chapter2.page63;
 
-import top.imdtf.multi.thread.utils.ThreadUtils;
+import top.imdtf.multi.thread.utils.ThreadUtil;
 
 /**
  * 0 *
@@ -12,7 +12,7 @@ public class Page63T3PublicVar {
     public static void main(String[] args) {
         PublicVar publicVar = new PublicVar();
         new MyThread(publicVar).start();
-        ThreadUtils.sleep(200);
+        ThreadUtil.sleep(200);
         publicVar.getValue();
     }
 }
@@ -23,14 +23,14 @@ class PublicVar {
 
     public synchronized void setValue(String username, String password) {
         this.username = username;
-        ThreadUtils.sleep(5000);
+        ThreadUtil.sleep(5000);
         this.password = password;
-        System.out.println("SetValue method, threadName: " + ThreadUtils.getThreadName() + ", username: " + username + ", password: " + password);
+        System.out.println("SetValue method, threadName: " + ThreadUtil.getThreadName() + ", username: " + username + ", password: " + password);
     }
 
     public synchronized void getValue() {
         // TODO remove synchronized
-        System.out.println("GetValue method, threadName: " + ThreadUtils.getThreadName() + ", username: " + username + ", password: " + password);
+        System.out.println("GetValue method, threadName: " + ThreadUtil.getThreadName() + ", username: " + username + ", password: " + password);
     }
 }
 

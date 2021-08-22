@@ -1,7 +1,7 @@
 package top.imdtf.multi.thread.chapter1.page49;
 
 import lombok.Getter;
-import top.imdtf.multi.thread.utils.ThreadUtils;
+import top.imdtf.multi.thread.utils.ThreadUtil;
 
 /**
  * 0 *
@@ -16,7 +16,7 @@ public class Page49CountPriority {
         myThread1.start();
         myThread2.setPriority(Thread.NORM_PRIORITY + 3);
         myThread2.start();
-        ThreadUtils.sleep(20000);
+        ThreadUtil.sleep(20000);
         myThread1.stop();
         myThread2.stop();
         System.out.println("Count of myThread1: " + myThread1.getCount());
